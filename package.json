@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/codenoy",
+  "homepage": "https://github.com/codenoy/picgo-plugin-oss-custom-headers",
   "scripts": {
     "test": "node ./test/index.js",
     "publish": "npm publish"
