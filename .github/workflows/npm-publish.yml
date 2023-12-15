@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: Log npm configuration
+        run: npm config list
       - run: npm publish --force
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
