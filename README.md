@@ -11,7 +11,7 @@ picgo 客户端不支持设置阿里云 OSS 图片上传的元信息(请求头 h
 **安装之后新增 uploader, 取消勾选, 隐藏 uploader**:
 由于 picgo 没有暴露修改内部 uploader 的方法, 所以依照源码重写了`aliyun`的内部`uploader`, 虽然这个新 uploader 并不是插件想要实现的功能, 但 picgo 也没有提供隐藏的方式, 我们取消勾选, 隐藏这个 uploader, 将功能交给`plugin`
 
-<img width="540px" src="./img/hide.png" alt="插件设置"/>
+<img width="540px" src="https://raw.githubusercontent.com/codenoy/picgo-plugin-oss-custom-headers/master/img/hide.png" alt="插件设置"/>
 
 **点击插件设置 Headers**:
 
@@ -33,6 +33,8 @@ Cache-Control: max-age=31536000; Expires: Thu, 20 Dec 2023 16:57:08 GMT
 ```
 Cache-Control: max-age=31536000;
 ```
+
+设置完成后, 上传到 OSS 的图片就添加了`HTTP`缓存头元信息.
 
 ## 在 Node.js 中使用插件
 
